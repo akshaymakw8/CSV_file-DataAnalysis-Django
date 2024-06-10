@@ -62,3 +62,6 @@ Usage
   - After uploading, the application will display the first few rows of the data.
   - Summary statistics and visualizations will be generated and displayed.
 
+ UI:
+ ![image](https://github.com/akshaymakw8/CSV_file-DataAnalysis-Django/assets/126386461/ea5915d1-6904-4e94-9239-06ade2d60565)
+
