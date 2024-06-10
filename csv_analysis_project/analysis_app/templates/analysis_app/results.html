@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Analysis Results</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="container" align="center">
+    <h1>Data Analysis Results</h1>
+
+    <h2>First Few Rows</h2>
+    <div class="data-section">
+        {{ first_rows|safe }}
+    </div>
+
+    <h2>Summary Statistics</h2>
+    <div class="data-section">
+        {{ stats|safe }}
+    </div>
+
+    <h2>Missing Values</h2>
+    <div class="data-section">
+        {{ missing_values|safe }}
+    </div>
+
+    <h2>Data Visualizations</h2>
+    <div class="data-section">
+        <h3>Histograms</h3>
+        <img src="data:image/png;base64,{{ hist_img }}" />
+    </div>
+    <div class="data-section">
+        <h3>Correlation Heatmap</h3>
+        <img src="data:image/png;base64,{{ heatmap_img }}" />
+    </div>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis Results</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+<div class="container" align="center">
+
+    <!-- Display analysis results here -->
+
+    <!-- Add a button to redirect to the upload page -->
+    <a href="{% url 'upload_file' %}" class="btn">Upload Another CSV File</a>
+</div>
+</body>
+</html>

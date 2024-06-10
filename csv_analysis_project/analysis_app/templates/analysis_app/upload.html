@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV File Upload</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:700,300">
+    <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      background: linear-gradient(to top right, darkmagenta 0%, white 100%);
+      font-family: "Open Sans", Helvetica, sans-serif;
+    }
+
+    .header {
+      font-size: 24px;
+      font-weight: bold;
+      font-style: italic;
+      color: #5c5959;
+      text-align: center;
+      margin-top: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .frame {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .center {
+      width: 400px;
+      padding: 20px;
+      border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+      background: #fff;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 10px;
+      font-weight: bold;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .dropzone {
+      width: 100px;
+      height: 80px;
+      border: 1px dashed #999;
+      border-radius: 3px;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .upload-icon {
+      margin: 25px 2px 2px 2px;
+    }
+
+    .upload-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: block;
+      width: 100px;
+      height: 30px;
+      background: darkmagenta;
+      color: #fff;
+      border-radius: 3px;
+      border: 0;
+      box-shadow: 0 3px 0 0 hotpink;
+      transition: all 0.3s ease-in-out;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+
+    .btn:hover {
+      background: rebeccapurple;
+      box-shadow: 0 3px 0 0 deeppink;
+    }
+
+    .message {
+      font-size: 14px;
+      color: green;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .error {
+      font-size: 14px;
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .footer {
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      background: darkmagenta;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+    Welcome to the CSV File Upload
+</div>
+<div class="frame">
+    <div class="center">
+        <div class="title">
+            <h1><b>CSV FILE UPLOAD</b></h1>
+        </div>
+
+        <div class="dropzone">
+            <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <label for="file" style="font-weight: bold;"></label><br>
+                <input type="file" name="file" id="file" class="upload-input" accept=".csv" required />
+                <button type="submit" class="btn">Upload</button>
+            </form>
+        </div>
+
+        {% if messages %}
+        <div class="message">
+            {% for message in messages %}
+            <p>{{ message }}</p>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if error %}
+        <div class="error">
+            <p>{{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+<div class="footer">
+    &copy; 2024 Akshay Makwana. All rights reserved.
+</div>
+<script src='https://100dayscss.com/codepen/js/jquery.min.js'></script>
+</body>
+</html>
