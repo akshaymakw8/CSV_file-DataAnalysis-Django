@@ -5,9 +5,7 @@ Project Description:
 This Django-based web application allows users to upload CSV files, performs data analysis using pandas and numpy, and displays the results and visualizations on the web interface. The application includes features for file upload, basic data analysis, and data visualization.
 
 Features:
-
 1.File Upload:
-
 - Users can upload CSV files through a simple web interface.
 - Uploaded files are stored temporarily for processing.
   
