@@ -35,3 +35,30 @@ Prerequisites
 - numpy
 - matplotlib
 - seaborn
+
+Installation
+1. Clone the repository:
+  -  git clone https://github.com/akshaymakw8/CSV_file-DataAnalysis-Django.git
+  -  cd CSV_file-DataAnalysis-Django
+2. Create and activate a virtual environment:
+  - python -m venv env
+  - source env/bin/activate  # On Windows use `env\Scripts\activate`
+3. Install the required packages:
+4. Run database migrations:
+  - python manage.py makemigration
+  - python manage.py migrate
+5. Start the Django development server:
+  - python manage.py runserver
+6. Access the application:
+  - Open your web browser and navigate to 'http://127.0.0.1:8000/'.
+
+Usage
+1. Upload a CSV File:
+
+  - Navigate to the file upload page.
+  - Select and upload a CSV file.
+2. View Data Analysis Results:
+
+  - After uploading, the application will display the first few rows of the data.
+  = Summary statistics and visualizations will be generated and displayed.
+
