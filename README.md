@@ -26,7 +26,7 @@ Features:
 - Simple and user-friendly interface using Django templates.
 - Organized display of data analysis results and visualizations.
 
-* Setup Instructions:
+Setup Instructions:
 
 Prerequisites
 - Python 3.x
