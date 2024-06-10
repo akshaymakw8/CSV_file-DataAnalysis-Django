@@ -60,5 +60,5 @@ Usage
 2. View Data Analysis Results:
 
   - After uploading, the application will display the first few rows of the data.
-  = Summary statistics and visualizations will be generated and displayed.
+  - Summary statistics and visualizations will be generated and displayed.
 
