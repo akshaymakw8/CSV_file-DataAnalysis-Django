@@ -65,3 +65,11 @@ Usage
  UI:
  ![image](https://github.com/akshaymakw8/CSV_file-DataAnalysis-Django/assets/126386461/ea5915d1-6904-4e94-9239-06ade2d60565)
 
+ Data Analysis Result:
+ ![image](https://github.com/akshaymakw8/CSV_file-DataAnalysis-Django/assets/126386461/587caf7d-b6b6-4eab-84b3-fdf8877a31a7)
+ ![image](https://github.com/akshaymakw8/CSV_file-DataAnalysis-Django/assets/126386461/d5e26bf7-f382-478c-9a22-7cb995ed9aa5)
+ another csvfile result.
+ ![image](https://github.com/akshaymakw8/CSV_file-DataAnalysis-Django/assets/126386461/87c98590-2289-4a47-b054-b13d4ffcabe8)
+
+
+
